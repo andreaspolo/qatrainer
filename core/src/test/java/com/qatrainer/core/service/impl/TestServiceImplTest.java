@@ -11,7 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.runners.MockitoJUnit44Runner;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.qatrainer.core.model.QALink;
+import com.qatrainer.core.model.Link;
 
 @SuppressWarnings("deprecation")
 @RunWith(MockitoJUnit44Runner.class)
@@ -28,7 +28,7 @@ public class TestServiceImplTest {
 	@Test
 	public void test() {
 		
-		QALink res = testObj.getLink();
+		Link res = testObj.getLink();
 		
 		assertSame(1, res.getId());
 	}

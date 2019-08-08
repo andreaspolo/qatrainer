@@ -23,7 +23,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.qatrainer.core.model.QALink;
+import com.qatrainer.core.model.Link;
 import com.qatrainer.core.service.TestService;
 
 @Controller
@@ -37,7 +37,7 @@ public class WelcomeController {
 
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
-		final QALink link = testService.getLink();
+		final Link link = testService.getLink();
 		model.put("message", "Error getting account!");
 		model.put("account", link.getId() + " : " + link.getName() + " : " + link.getUrl());
 		return "welcome/show";
