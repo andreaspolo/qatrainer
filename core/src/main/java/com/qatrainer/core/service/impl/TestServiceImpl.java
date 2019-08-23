@@ -1,9 +1,5 @@
 package com.qatrainer.core.service.impl;
 
-import java.awt.CardLayout;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.EntityManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
