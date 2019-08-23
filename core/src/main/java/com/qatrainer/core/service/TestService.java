@@ -1,8 +1,8 @@
 package com.qatrainer.core.service;
 
-import com.qatrainer.core.model.QALink;
+import com.qatrainer.core.model.Link;
 
 public interface TestService {
 
-	QALink getLink();
+	Link getLink();
 }
