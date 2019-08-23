@@ -22,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.qatrainer.core.model.Link;
 import com.qatrainer.core.service.TestService;
@@ -35,7 +36,7 @@ public class WelcomeController {
 	@Autowired
 	private TestService testService;
 
-	@RequestMapping("/")
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String welcome(Map<String, Object> model) {
 		final Link link = testService.getLink();
 		model.put("message", "Error getting account!");
@@ -43,9 +44,8 @@ public class WelcomeController {
 		return "welcome/show";
 	}
 
-	@RequestMapping("foo")
+	@RequestMapping(value = "foo", method = RequestMethod.GET)
 	public String foo(Map<String, Object> model) {
 		throw new RuntimeException("Foo");
 	}
-
 }
